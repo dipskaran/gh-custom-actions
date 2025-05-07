@@ -1,9 +1,10 @@
 name: 'Get and cache dependencies'
 description: 'Get the dependencies via npm ci and cache them'
 inputs:
-  caching: 'whether to cache the dependencies or not'
-  required: false
-  default: 'true'
+  caching:
+    description: 'whether to cache the dependencies or not'
+    required: false
+    default: 'true'
 runs:
   using: 'composite'
   steps:
