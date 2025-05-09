@@ -1,0 +1,19 @@
+name: Deploy to S3
+description: Deploy the website to S3
+inputs:
+  bucket:
+    description: 'S3 bucket name'
+    required: true
+  bucket-region:
+    description: 'S3 bucket AWS region'
+    required: false
+    default: 'us-east-2'
+  dist-folder:
+    description: 'Folder containing the build artifacts'
+    required: true
+outputs:
+  website-url:
+    description: 'URL of the deployed website'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
