@@ -72,7 +72,6 @@ jobs:
           bucket: gha-custion-actions-hosting-ds
           dist-folder: ./dist
       - name: Output website URL
-        id: output-url
         run: |
           echo "Live URL: ${{ steps.deploy.outputs.website-url }}"
           
